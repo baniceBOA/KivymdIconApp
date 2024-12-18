@@ -6,13 +6,13 @@
 [app]
 
 # (str) Title of your application
-title = KivyMDIcon
+title = IconApp
 
 # (str) Package name
-package.name = kivymdicon
+package.name = iconapp
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = com.kivymdicon
+package.domain = com.iconapp
 
 # (str) Source code where the main.py live
 source.dir = .
@@ -49,10 +49,10 @@ requirements = python3,kivy, kivymd
 # requirements.source.kivy = ../../kivy
 
 # (str) Presplash of the application
-presplash.filename = icon.png
+#presplash.filename = icon.png
 
 # (str) Icon of the application
-icon.filename = icon.png
+#icon.filename = icon.png
 
 # (list) Supported orientations
 # Valid options are: landscape, portrait, portrait-reverse or landscape-reverse
@@ -411,7 +411,7 @@ ios.codesign.allowed = false
 [buildozer]
 
 # (int) Log level (0 = error only, 1 = info, 2 = debug (with command output))
-log_level = 2
+log_level = 0
 
 # (int) Display warning if buildozer is run as root (0 = False, 1 = True)
 warn_on_root = 1
