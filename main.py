@@ -3,9 +3,10 @@ from kivy.properties import StringProperty
 from kivy.uix.screenmanager import Screen
 
 from kivymd.icon_definitions import md_icons
-from kivymd.app import MDApp
+from kivymd.app import MDApp, App
+from kivy.uix.recycleboxlayout import RecycleBoxLayout
 from kivymd.uix.list import OneLineIconListItem
-
+from random import choice
 
 Builder.load_string(
     '''
@@ -35,13 +36,21 @@ Builder.load_string(
                 id: search_field
                 hint_text: 'Search icon'
                 on_text: root.set_list_md_icons(self.text, True)
+        MDBoxLayout:
+            size_hint_y:None
+            height:dp(56)
+            MDLabel:
+                id:tag_label
+                font_size:dp(36)
+                theme_text_color:'Custom'
+                text_color:[0,0.5,0.2,0.8]     
 
         RecycleView:
             id: rv
             key_viewclass: 'viewclass'
             key_size: 'height'
 
-            RecycleBoxLayout:
+            CustomRecycleBoxLayout:
                 padding: dp(10)
                 default_size: None, dp(48)
                 default_size_hint: 1, None
@@ -50,7 +59,15 @@ Builder.load_string(
                 orientation: 'vertical'
 '''
 )
-
+class CustomRecycleBoxLayout(RecycleBoxLayout):
+    def set_visible_views(self, indices, data, viewport):
+        app = App.get_running_app()
+        if indices:
+            current = data[indices[0]]
+            app.root.ids.tag_label.text = current['text'][0].upper()
+            
+        return super().set_visible_views(indices, data, viewport)
+        
 
 class CustomOneLineIconListItem(OneLineIconListItem):
     icon = StringProperty()
