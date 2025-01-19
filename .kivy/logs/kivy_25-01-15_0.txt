@@ -1,4 +1,4 @@
-[INFO   ] Logger: Record log in /storage/emulated/0/Download/KivymdIconApp/.kivy/logs/kivy_25-01-04_19.txt
+[INFO   ] Logger: Record log in /storage/emulated/0/Download/KivymdIconApp/.kivy/logs/kivy_25-01-15_0.txt
 [INFO   ] Kivy: v2.2.1
 [INFO   ] Kivy: Installed at "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.11/site-packages/kivy/__init__.py"
 [INFO   ] Python: v3.11.4 (main, Sep 30 2023, 10:54:38) [GCC 11.4.0]
@@ -22,7 +22,7 @@
 [INFO   ] Window: auto add sdl2 input provider
 [INFO   ] Window: virtual keyboard not allowed, single mode, not docked
 [INFO   ] Clipboard: Provider: android
+[INFO   ] GL: NPOT texture support is available
 [WARNING] Base: Unknown <android> provider
 [INFO   ] Base: Start application main loop
-[INFO   ] GL: NPOT texture support is available
 [INFO   ] Base: Leaving application in progress...
